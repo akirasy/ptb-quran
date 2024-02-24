@@ -204,6 +204,7 @@ def main() -> None:
     application.add_handler(CommandHandler("change_config", change_app_config))
     application.add_handler(CommandHandler("change_progress", change_quran_progress))
     application.add_handler(CommandHandler("show_config", show_current_config))
+    application.add_handler(CommandHandler("reset_jobs", reset_all_jobs))
 
     # create job schedule
     add_job(CallbackContext(application=application))
